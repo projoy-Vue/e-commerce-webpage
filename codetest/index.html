@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive E-commerce Footer</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+  /* General Footer Styles */
+  body {
+    font-family: poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  footer {
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 50px 20px;
+    font-size: 14px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer-section {
+    margin: 5px;
+    padding: 15px 20px;
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+  }
+  .footer-section h3 {
+    color: #ffc107;
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .footer-section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-section ul li {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .footer-section a {
+    /* background-color: blue; */
+    font-size: 1.2em;
+    color: #f8f9fa;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-section a:hover {
+    color: #ffc107;
+  }
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .accordion-button {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    outline: none;
+    color: #f8f9fa;
+    cursor: pointer;
+    padding: 10px 0;
+    width: 100%;
+    transition: color 0.3s;
+    text-align: center;
+  }
+  .accordion-button:hover {
+    color: #ffc107;
+  }
+  .accordion-button.active {
+    color: #ffc107;
+  }
+  .newsletter-signup {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+    background-color: #343a40;
+    color: #f8f9fa;
+  }
+  .newsletter-signup input[type="email"] {
+    width: 100%; 
+    border: none;
+    outline: none;
+    background-color: inherit;
+   
+  }
+  .newsletter-signup button {
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    background-color: #ffc107;
+    color: #212529;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  .newsletter-signup button:hover {
+    background-color: #ffca2b;
+  }
+  .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #f8f9fa;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+  .social-icons a:hover {
+    color: #ffc107;
+  }
+  .footer-info {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #6c757d;
+  }
+  .additional-info {
+    margin-top: 20px;
+    text-align: center;
+    color: #6c757d;
+  }
+  .additional-info ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+  }
+  .additional-info ul li {
+    margin: 0 10px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-section {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<footer>
+  <div class="container">
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+      <p><a href="#">Contact Us</a></p>
+    </div>
+    <div class="footer-section">
+      <h3>Customer Service</h3>
+      <button class="accordion-button">FAQs <i class="fas fa-chevron-down"></i></button>
+      <div class="accordion-content">
+        <ul>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Order Tracking</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Contact Support</a></li>
+        </ul>
+      </div>
+      <button class="accordion-button">Policies <i class="fas fa-chevron-down"></i></button>
+      <div class="accordion-content">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>Newsletter</h3>
+      <div class="newsletter-signup">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Best Sellers</a></li>
+        <li><a href="#">Men’s Clothing</a></li>
+        <li><a href="#">Women’s Clothing</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Sale</a></li>
+        <li><a href="#">Seasonal Collections</a></li>
+      </ul>
+    </div>
+    <div class="footer-section additional-info">
+      <h3>Additional Information</h3>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Affiliate Program</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Sustainability</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-info">
+    <p>&copy; 2024 E-commerce. All rights reserved. | Designed by Your Company</p>
+  </div>
+</footer>
+
+<script>
+  // Accordion Menu Functionality
+  const accordionButtons = document.querySelectorAll('.accordion-button');
+
+  accordionButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      this.classList.toggle('active');
+      const accordionContent = this.nextElementSibling;
+      if (accordionContent.style.maxHeight) {
+        accordionContent.style.maxHeight = null;
+      } else {
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
