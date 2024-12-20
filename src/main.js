@@ -51,7 +51,7 @@ function nextSlide() {
     currentSlide = (currentSlide + 1) % totalSlides;
     showSlide(currentSlide);
 }
-setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
+setInterval(nextSlide, 1000); // Auto-slide every 5 seconds
 showSlide(currentSlide);
 
 // Product Quick View Functionality
@@ -331,10 +331,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Mock data for product recommendations
     const products = [
-        { id: 1, name: 'Premium Wireless Headphones', image: '/demo-repo/src/public/headphone.jpg', price: 129.99 },
-        { id: 2, name: 'Wireless Charging Pad', image: '/demo-repo/src/public/Wireless Charging Pad.jpg', price: 39.99 },
-        { id: 3, name: 'Smart Home Security Camera', image: '/demo-repo/src/public/Smart Home Security Camera.jpg', price: 149.99 },
-        { id: 4, name: 'Portable Bluetooth Speaker', image: '/demo-repo/src/public/Bluetooth.jpg', price: 79.99 }
+        { id: 1, name: 'Premium Wireless Headphones', image: './public/headphone.jpg', price: 129.99 },
+        { id: 2, name: 'Wireless Charging Pad', image: './public/Wireless Charging Pad.jpg', price: 39.99 },
+        { id: 3, name: 'Smart Home Security Camera', image: './public/Smart Home Security Camera.jpg', price: 149.99 },
+        { id: 4, name: 'Portable Bluetooth Speaker', image: './public/Bluetooth.jpg', price: 79.99 }
         // Add more products as needed
     ];
 
@@ -374,6 +374,3 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-
-
-
